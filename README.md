@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Faloe Foundry Site
 
 ```sh
 npm create astro@latest -- --template minimal
