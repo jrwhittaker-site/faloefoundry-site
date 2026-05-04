@@ -515,10 +515,12 @@ import Layout from '../layouts/Layout.astro';
           <img
             src="/founder-on-set.jpeg"
             alt="Jonathan Whittaker on set"
-            class="w-full h-full object-cover object-top"
-            style="filter: grayscale(100%) brightness(0.58) contrast(1.1);"
+            class="w-full h-full object-cover"
+            style="filter: grayscale(90%) sepia(50%) brightness(0.62) contrast(1.06); object-position: 38% 8%;"
           />
         </div>
+        <!-- Warm amber overlay — matches Foundry image treatment -->
+        <div class="absolute inset-0" style="background: rgba(155, 105, 40, 0.18); mix-blend-mode: multiply;"></div>
         <!-- Fade bottom into black -->
         <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 65%, #000000 100%);"></div>
       </div>
