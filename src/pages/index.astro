@@ -216,6 +216,21 @@ import Layout from '../layouts/Layout.astro';
         If you want to be a filmmaker, you must make films.
       </p>
 
+      <!-- On-set image — breaks out of max-w-2xl to bleed wider -->
+      <div class="relative mb-16 overflow-hidden" style="margin-left: calc(-1 * (100vw - 100%) / 2); margin-right: 0; max-width: min(860px, 90vw);">
+        <div style="aspect-ratio: 16/7; overflow: hidden;">
+          <img
+            src="/foundry-new-york.jpeg"
+            alt="Jonathan Whittaker with crew on location in New York"
+            class="w-full h-full object-cover object-center"
+            style="filter: grayscale(100%) brightness(0.55) contrast(1.08);"
+          />
+        </div>
+        <!-- Fade edges into black -->
+        <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 55%, #000000 100%);"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to right, transparent 70%, #000000 100%);"></div>
+      </div>
+
       <div class="space-y-10 mb-16">
 
         <div class="space-y-4">
@@ -488,8 +503,25 @@ import Layout from '../layouts/Layout.astro';
       <div class="flex-1 h-px bg-[#fdfcf8] opacity-10 max-w-xs"></div>
     </div>
 
+    <!-- Founder image + letter — two-column on desktop, stacked on mobile -->
+    <div class="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+
+      <!-- Portrait — sits at the natural left edge while the letter is indented -->
+      <div class="relative flex-shrink-0 w-full md:w-64 lg:w-80 overflow-hidden">
+        <div style="aspect-ratio: 3/4; overflow: hidden;">
+          <img
+            src="/founder-on-set.jpeg"
+            alt="Jonathan Whittaker on set"
+            class="w-full h-full object-cover object-top"
+            style="filter: grayscale(100%) brightness(0.58) contrast(1.1);"
+          />
+        </div>
+        <!-- Fade bottom into black -->
+        <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 65%, #000000 100%);"></div>
+      </div>
+
     <!-- Content offset like a letter — further right than any other section -->
-    <div class="md:ml-20 lg:ml-32 xl:ml-40 max-w-xl">
+    <div class="md:ml-4 lg:ml-8 max-w-xl flex-1">
 
       <h2
         class="font-light text-[#fdfcf8] leading-[0.95] mb-12"
@@ -562,7 +594,8 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
 
-    </div>
+    </div><!-- close letter content -->
+    </div><!-- close flex row -->
 
   </section>
 
