@@ -47,6 +47,11 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
 
+      <!-- Film metadata annotation — a maker's mark -->
+      <p class="mt-10 text-[9px] font-light text-[#fdfcf8]" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.22em; opacity: 0.2;">
+        [ 1.85:1 &nbsp;/&nbsp; 24fps &nbsp;/&nbsp; New York ]
+      </p>
+
     </div>
 
     <div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-30">
@@ -349,11 +354,11 @@ import Layout from '../layouts/Layout.astro';
         a story. You leave with a film.
       </p>
 
-      <!-- Three phases -->
+      <!-- Three phases — brackets as a nod to shot lists and slates -->
       <div class="space-y-0 mb-16">
 
         <div class="border-t border-[#fdfcf8] border-opacity-10 py-8 grid grid-cols-[3rem_1fr] gap-6 items-start">
-          <p class="text-[9px] tracking-[0.2em] uppercase text-[#c8c5bc] opacity-50 pt-1 font-light" style="font-family: 'Inter', system-ui, sans-serif;">01</p>
+          <p class="text-[9px] tracking-[0.12em] uppercase text-[#c8c5bc] opacity-50 pt-1 font-light" style="font-family: 'Inter', system-ui, sans-serif;">[&nbsp;01&nbsp;]</p>
           <div>
             <p class="text-[10px] tracking-[0.2em] uppercase text-[#c8c5bc] mb-3 font-light" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.1em;">Virtual Lead-Up</p>
             <div class="space-y-4">
@@ -370,7 +375,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="border-t border-[#fdfcf8] border-opacity-10 py-8 grid grid-cols-[3rem_1fr] gap-6 items-start">
-          <p class="text-[9px] tracking-[0.2em] uppercase text-[#c8c5bc] opacity-50 pt-1 font-light" style="font-family: 'Inter', system-ui, sans-serif;">02</p>
+          <p class="text-[9px] tracking-[0.12em] uppercase text-[#c8c5bc] opacity-50 pt-1 font-light" style="font-family: 'Inter', system-ui, sans-serif;">[&nbsp;02&nbsp;]</p>
           <div>
             <p class="text-[10px] tracking-[0.2em] uppercase text-[#c8c5bc] mb-3 font-light" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.1em;">The Field</p>
             <div class="space-y-4">
@@ -399,7 +404,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="border-t border-b border-[#fdfcf8] border-opacity-10 py-8 grid grid-cols-[3rem_1fr] gap-6 items-start">
-          <p class="text-[9px] tracking-[0.2em] uppercase text-[#c8c5bc] opacity-50 pt-1 font-light" style="font-family: 'Inter', system-ui, sans-serif;">03</p>
+          <p class="text-[9px] tracking-[0.12em] uppercase text-[#c8c5bc] opacity-50 pt-1 font-light" style="font-family: 'Inter', system-ui, sans-serif;">[&nbsp;03&nbsp;]</p>
           <div>
             <p class="text-[10px] tracking-[0.2em] uppercase text-[#c8c5bc] mb-3 font-light" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.1em;">The Edit</p>
             <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
@@ -423,8 +428,14 @@ import Layout from '../layouts/Layout.astro';
   <!-- ─── STUDIO ────────────────────────────────────────── -->
   <section id="studio" class="relative px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-48 border-t border-[#fdfcf8] border-opacity-10 overflow-hidden">
 
+    <!-- Large background numeral -->
     <div class="absolute inset-0 flex items-end justify-end pointer-events-none select-none pr-8 md:pr-16 pb-12 overflow-hidden" aria-hidden="true">
       <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(6rem, 18vw, 18rem); letter-spacing: -0.04em; opacity: 0.03; line-height: 1;">03</span>
+    </div>
+
+    <!-- DRAFT watermark — this space is genuinely still in formation -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden" aria-hidden="true">
+      <span style="font-family: 'Inter', system-ui, sans-serif; font-size: clamp(4rem, 14vw, 11rem); letter-spacing: 0.35em; color: #fdfcf8; opacity: 0.035; font-weight: 300; text-transform: uppercase; transform: rotate(-25deg); display: block;">DRAFT</span>
     </div>
 
     <div class="relative max-w-2xl">
@@ -466,13 +477,19 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ─── FOUNDER'S NOTE ───────────────────────────────── -->
+  <!-- Intentionally breaks the left-flush system. This is a letter, not a page. -->
   <section id="founder" class="px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-40 border-t border-[#fdfcf8] border-opacity-10">
 
-    <div class="max-w-3xl">
-
-      <p class="text-[10px] tracking-[0.3em] uppercase text-[#c8c5bc] mb-16 font-light" style="font-family: 'Inter', system-ui, sans-serif;">
-        The Founder
+    <!-- Letter dateline — replaces the standard section label -->
+    <div class="flex items-center gap-8 mb-16">
+      <p class="text-[9px] tracking-[0.18em] uppercase text-[#c8c5bc] opacity-40 font-light whitespace-nowrap" style="font-family: 'Inter', system-ui, sans-serif;">
+        Jonathan Whittaker &nbsp;&middot;&nbsp; New York &nbsp;&middot;&nbsp; 2026
       </p>
+      <div class="flex-1 h-px bg-[#fdfcf8] opacity-10 max-w-xs"></div>
+    </div>
+
+    <!-- Content offset like a letter — further right than any other section -->
+    <div class="md:ml-20 lg:ml-32 xl:ml-40 max-w-xl">
 
       <h2
         class="font-light text-[#fdfcf8] leading-[0.95] mb-12"
@@ -481,7 +498,7 @@ import Layout from '../layouts/Layout.astro';
         On craft, and why<br /><span style="font-style: italic;">this had to exist.</span>
       </h2>
 
-      <div class="space-y-10 max-w-2xl" data-fade>
+      <div class="space-y-10" data-fade>
 
         <div class="space-y-4">
           <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
@@ -538,6 +555,11 @@ import Layout from '../layouts/Layout.astro';
           I want to hear from you.
         </p>
 
+        <!-- Letter signature -->
+        <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-style: italic; opacity: 0.55; padding-top: 0.5rem;">
+          &mdash;&thinsp;J.W.
+        </p>
+
       </div>
 
     </div>
@@ -545,12 +567,14 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ─── MANIFESTO ─────────────────────────────────────── -->
-  <section id="manifesto" class="relative px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-48 border-t border-[#fdfcf8] border-opacity-10 overflow-hidden">
+  <!-- Sepia background — vintage celluloid warmth -->
+  <section id="manifesto" class="relative px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-48 border-t border-[#fdfcf8] border-opacity-10 overflow-hidden" style="background: #110f0c;">
 
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden="true">
-      <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(8rem, 20vw, 22rem); letter-spacing: -0.04em; opacity: 0.025;">Faloe</span>
+      <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(8rem, 20vw, 22rem); letter-spacing: -0.04em; opacity: 0.02;">Faloe</span>
     </div>
 
+    <!-- Body copy — stays inside the max-width container -->
     <div class="relative max-w-3xl">
 
       <p class="text-[10px] tracking-[0.3em] uppercase text-[#c8c5bc] mb-16 font-light" data-fade style="font-family: 'Inter', system-ui, sans-serif;">
@@ -590,22 +614,26 @@ import Layout from '../layouts/Layout.astro';
           We are still figuring some of this out. The work keeps teaching us.
         </p>
 
-        <div data-fade>
-          <p class="font-light text-[#c8c5bc] leading-[1.85] max-w-2xl mb-6" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-            Not virality. Not velocity.
-          </p>
-          <p class="font-semibold text-[#fdfcf8] leading-[0.92]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.5rem, 6vw, 5rem); letter-spacing: -0.04em;">
-            The frame<br />that endures.
-          </p>
-        </div>
+      </div>
 
-        <div class="pt-4 flex items-center gap-6" data-fade>
-          <div class="w-8 h-px bg-[#fdfcf8] opacity-20"></div>
-          <p class="text-[#fdfcf8] opacity-50 tracking-wide" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-style: italic;">
-            Faloe &nbsp;&middot;&nbsp; 2026
-          </p>
-        </div>
+    </div>
 
+    <!-- Closing — intentionally breaks the grid. Off-axis. Raw. -->
+    <div class="relative mt-20 md:mt-28" data-fade>
+      <div style="transform: rotate(-2deg); transform-origin: left center; margin-left: -0.5rem;">
+        <p class="font-light text-[#c8c5bc] leading-[1.85] mb-5" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
+          Not virality. Not velocity.
+        </p>
+        <p class="font-light text-[#fdfcf8] leading-[0.88]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(3rem, 8vw, 6.5rem); letter-spacing: -0.04em;">
+          A film.<br /><span style="font-style: italic;">Not content.</span>
+        </p>
+      </div>
+
+      <div class="pt-12 flex items-center gap-6" style="transform: rotate(-2deg); transform-origin: left center; margin-left: -0.5rem;">
+        <div class="w-8 h-px bg-[#fdfcf8] opacity-20"></div>
+        <p class="text-[#fdfcf8] opacity-40 tracking-wide" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-style: italic;">
+          Faloe &nbsp;&middot;&nbsp; 2026
+        </p>
       </div>
     </div>
 
