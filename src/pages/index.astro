@@ -748,6 +748,24 @@ import Layout from '../layouts/Layout.astro';
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Heavier grain on the manifesto — layered on top of the global body grain */
+  #manifesto::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.65;
+    mix-blend-mode: overlay;
+  }
+
+  /* Ensure manifesto content sits above the grain layer */
+  #manifesto > * {
+    position: relative;
+    z-index: 1;
+  }
 </style>
 
 <script>
