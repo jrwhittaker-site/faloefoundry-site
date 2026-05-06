@@ -13,7 +13,6 @@ import Layout from '../layouts/Layout.astro';
       <a href="#foundry"   class="text-[11px] md:text-[12px] uppercase font-light text-[#c8c5bc] hover:text-[#fdfcf8] transition-colors duration-300" style="letter-spacing: 0.06em;">Foundry</a>
       <a href="#field"     class="text-[11px] md:text-[12px] uppercase font-light text-[#c8c5bc] hover:text-[#fdfcf8] transition-colors duration-300" style="letter-spacing: 0.06em;">Field</a>
       <a href="#studio"    class="text-[11px] md:text-[12px] uppercase font-light text-[#c8c5bc] hover:text-[#fdfcf8] transition-colors duration-300" style="letter-spacing: 0.06em;">Studio</a>
-      <a href="#manifesto" class="text-[11px] md:text-[12px] uppercase font-light text-[#c8c5bc] hover:text-[#fdfcf8] transition-colors duration-300" style="letter-spacing: 0.06em;">Manifesto</a>
     </nav>
   </header>
 
@@ -151,8 +150,8 @@ import Layout from '../layouts/Layout.astro';
     <!-- Image — full section width, widescreen, warm sepia -->
     <div class="relative my-16 overflow-hidden" style="aspect-ratio: 16/9;">
       <img
-        src="/foundry-new-york.jpeg"
-        alt="Jonathan Whittaker with crew on location in New York"
+        src="/genoa-set-cafe.jpeg"
+        alt="On set in Genoa, February 2026."
         class="w-full h-full object-cover"
         style="filter: grayscale(90%) sepia(50%) brightness(0.62) contrast(1.06); object-position: center 15%;"
       />
@@ -417,6 +416,42 @@ import Layout from '../layouts/Layout.astro';
 
   </section>
 
+  <!-- ─── PROOF ──────────────────────────────────────────── -->
+  <section id="proof" class="px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-40 border-t border-[#fdfcf8] border-opacity-10">
+
+    <!-- Full-width image -->
+    <div class="relative mb-16 overflow-hidden" style="aspect-ratio: 16/9;">
+      <img
+        src="/genoa-monitor.jpeg"
+        alt="On set in Genoa, February 2026."
+        class="w-full h-full object-cover"
+        style="filter: grayscale(90%) sepia(50%) brightness(0.62) contrast(1.06); object-position: center 15%;"
+      />
+      <div class="absolute inset-0" style="background: rgba(155, 105, 40, 0.18); mix-blend-mode: multiply;"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 50%, #000000 100%);"></div>
+    </div>
+
+    <div class="max-w-2xl space-y-6" data-fade>
+
+      <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
+        The model is already in motion.
+        A filmmaker came with zero experience and a real love of cinema.
+        We worked. He shot his first short film and won Best Debut Director at the Rajasthan International Film Festival.
+        For the second, I flew to Genoa. A feature is now in development.
+      </p>
+
+      <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
+        That is what this looks like in practice.
+      </p>
+
+      <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-style: italic; opacity: 0.55; padding-top: 0.5rem;">
+        &mdash;&thinsp;J.W.
+      </p>
+
+    </div>
+
+  </section>
+
   <!-- ─── FOUNDER'S NOTE ───────────────────────────────── -->
   <!-- Intentionally breaks the left-flush system. This is a letter, not a page. -->
   <section id="founder" class="px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-40 border-t border-[#fdfcf8] border-opacity-10">
@@ -433,8 +468,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="relative flex-shrink-0 w-full md:w-64 lg:w-80 overflow-hidden">
         <div style="aspect-ratio: 3/4; overflow: hidden;">
           <img
-            src="/founder-on-set.jpeg"
-            alt="Jonathan Whittaker on set"
+            src="/founder-portrait.jpeg"
+            alt="Jonathan Whittaker | New York."
             class="w-full h-full object-cover"
             style="filter: grayscale(90%) sepia(50%) brightness(0.62) contrast(1.06); object-position: 38% 8%;"
           />
@@ -479,122 +514,6 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
 
-    </div>
-
-  </section>
-
-  <!-- ─── TECHNOLOGY PHILOSOPHY ─────────────────────────── -->
-  <!-- Moved below the offerings — the 'why' after the 'what' -->
-  <section id="philosophy" class="relative px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-40 border-t border-[#fdfcf8] border-opacity-10 overflow-hidden">
-
-    <div class="absolute inset-0 flex items-center justify-end pointer-events-none select-none pr-8 md:pr-16 overflow-hidden" aria-hidden="true">
-      <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(8rem, 20vw, 22rem); letter-spacing: -0.04em; opacity: 0.025; line-height: 1;">F</span>
-    </div>
-
-    <div class="relative max-w-2xl">
-
-      <p class="text-[10px] tracking-[0.3em] uppercase text-[#c8c5bc] mb-16 font-light" style="font-family: 'Inter', system-ui, sans-serif;">
-        The Human Tradition
-      </p>
-
-      <h2
-        class="font-light text-[#fdfcf8] leading-[0.95] mb-12"
-        style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.5rem, 5.5vw, 4.5rem); letter-spacing: -0.03em;"
-      >
-        Technology in service<br />of the artist.<br /><span style="font-style: italic;">Always.</span>
-      </h2>
-
-      <div class="space-y-6">
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          We draw one clear line.
-        </p>
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          Technology supports the artist. It does not replace them.
-          In our workshops and programs, there is no AI on the screen or in the script.
-          The frame is authored by a human being with something to say.
-        </p>
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          This is not a rejection of progress.
-          It is a commitment to a tradition: the filmmaker as author,
-          the cam&eacute;ra-stylo, the deliberate eye.
-          In our rooms, that tradition is not theory. It is practice.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ─── MANIFESTO ─────────────────────────────────────── -->
-  <section id="manifesto" class="relative px-8 md:px-16 lg:px-24 xl:px-32 py-32 md:py-48 border-t border-[#fdfcf8] border-opacity-10 overflow-hidden" style="background: #110f0c;">
-
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden="true">
-      <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(8rem, 20vw, 22rem); letter-spacing: -0.04em; opacity: 0.02;">Faloe</span>
-    </div>
-
-    <div class="relative max-w-3xl">
-
-      <p class="text-[10px] tracking-[0.3em] uppercase text-[#c8c5bc] mb-16 font-light" data-fade style="font-family: 'Inter', system-ui, sans-serif;">
-        The Manifesto
-      </p>
-
-      <div class="space-y-8">
-
-        <p class="font-light text-[#fdfcf8] leading-[1.2]" data-fade style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: -0.03em;">
-          We reject the premise that cinema should be optimized.
-        </p>
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85] max-w-2xl" data-fade style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          The first filmmakers were also technologists. They mixed their own emulsions and
-          invented the grammar as they went. Every tool that followed extended the same gesture:
-          a human being deciding what to look at, and why.
-        </p>
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85] max-w-2xl" data-fade style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          The tool is not the problem. Surrendering authorship to it is. Our answer is not
-          a better product. It is a different practice.
-        </p>
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85] max-w-2xl" data-fade style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          Craft learned in the room with people still doing it. Tested in the field under
-          real conditions. Refined inside a residency that values depth over speed. This is
-          how a tradition stays alive: not by being preserved, but by being taught.
-        </p>
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85] max-w-2xl" data-fade style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          Every lens choice, every cut, every location: made because a person decided, not
-          because a system suggested. The cam&eacute;ra-stylo. The camera as pen.
-          The filmmaker as author.
-        </p>
-
-        <p class="font-light text-[#c8c5bc] leading-[1.85] max-w-2xl" data-fade style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          We are still figuring some of this out. The work keeps teaching us.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- Closing — intentionally breaks the grid. Off-axis. Raw. -->
-    <div class="relative mt-20 md:mt-28" data-fade>
-      <div style="transform: rotate(-2deg); transform-origin: left center; margin-left: -0.5rem;">
-        <p class="font-light text-[#c8c5bc] leading-[1.85] mb-5" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
-          Not virality. Not velocity.
-        </p>
-        <p class="font-light text-[#fdfcf8] leading-[0.88]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(3rem, 8vw, 6.5rem); letter-spacing: -0.04em;">
-          A film.<br /><span style="font-style: italic;">Not content.</span>
-        </p>
-      </div>
-      <div class="pt-12 flex items-center gap-6" style="transform: rotate(-2deg); transform-origin: left center; margin-left: -0.5rem;">
-        <div class="w-8 h-px bg-[#fdfcf8] opacity-20"></div>
-        <p class="text-[#fdfcf8] opacity-40 tracking-wide" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-style: italic;">
-          Faloe &nbsp;&middot;&nbsp; 2026
-        </p>
-      </div>
     </div>
 
   </section>
@@ -684,11 +603,14 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <div class="border-t border-[#fdfcf8] border-opacity-5 pt-8">
+    <div class="border-t border-[#fdfcf8] border-opacity-5 pt-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
       <p class="text-[10px] font-light text-[#c8c5bc] opacity-40 leading-[1.8] max-w-lg" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.02em;">
         <span class="uppercase" style="letter-spacing: 0.15em;">In Network</span>
         &nbsp;&mdash;&nbsp;
         Strategic partnerships with industry-leading post-production houses and virtual stages are currently under finalization.
+      </p>
+      <p class="flex-shrink-0 opacity-30" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-style: italic; color: #b8956a; letter-spacing: 0.01em;">
+        A Film. Not Content.
       </p>
     </div>
 
@@ -709,23 +631,6 @@ import Layout from '../layouts/Layout.astro';
   [data-fade].is-visible {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  /* Heavier grain on the manifesto — layered on top of the global body grain */
-  #manifesto::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.65;
-    mix-blend-mode: overlay;
-  }
-
-  #manifesto > * {
-    position: relative;
-    z-index: 1;
   }
 
   /* Keyboard focus styles — visible ring for tab navigation */
