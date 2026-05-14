@@ -226,7 +226,7 @@ import Layout from '../layouts/Layout.astro';
         <a
           href="/workshops/beyond-do-it-again"
           class="cta-primary inline-block text-[13px] font-light uppercase"
-          style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.12em; padding: 16px 40px; background: #B8963E; color: #0a0a08; text-decoration: none;"
+          style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.12em; padding: 18px 48px; background: transparent; color: #B8963E; text-decoration: none;"
         >
           [&nbsp;Now Enrolling&nbsp;]
         </a>
@@ -647,15 +647,14 @@ import Layout from '../layouts/Layout.astro';
     transform: translateY(0);
   }
 
-  /* Primary CTA — solid gold, inverts on hover */
+  /* Primary CTA — outlined gold, fills on hover */
   .cta-primary {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     border: 1px solid #B8963E;
   }
   .cta-primary:hover {
-    background: #0a0a08;
-    color: #B8963E;
-    border-color: #B8963E;
+    background: #B8963E;
+    color: #0a0a08;
   }
   @media (prefers-reduced-motion: reduce) {
     .cta-primary { transition: none; }
