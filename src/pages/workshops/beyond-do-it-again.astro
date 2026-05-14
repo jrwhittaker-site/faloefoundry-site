@@ -8,19 +8,20 @@ import Layout from '../../layouts/Layout.astro';
 >
 
   <!-- ─── NAV ─────────────────────────────────────────── -->
-  <header class="fixed top-0 left-0 right-0 z-50 px-6 md:px-20 py-3 flex items-center justify-between" style="background: linear-gradient(to bottom, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.85) 80%, transparent 100%); backdrop-filter: blur(4px);">
-    <a href="/" class="text-[#fdfcf8] uppercase select-none" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; letter-spacing: 0.3em;">
-      Faloe
-    </a>
-    <span class="text-[11px] uppercase font-light text-[#c8c5bc]" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.1em;">
-      Foundry &nbsp;&middot;&nbsp; Workshop
-    </span>
+  <header class="fixed top-0 left-0 right-0 z-50 z-50 flex items-center justify-between" style="background: linear-gradient(to bottom, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.85) 80%, transparent 100%); backdrop-filter: blur(4px);">
+    <div class="w-full max-w-[1440px] mx-auto px-6 md:px-20 py-3 flex items-center justify-between">
+      <a href="/" class="text-[#fdfcf8] uppercase select-none" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; letter-spacing: 0.3em;">
+        Faloe
+      </a>
+      <span class="text-[11px] uppercase font-light text-[#c8c5bc]" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.1em;">
+        Foundry &nbsp;&middot;&nbsp; Workshop
+      </span>
+    </div>
   </header>
 
   <!-- ─── HERO ──────────────────────────────────────────── -->
-  <section class="px-6 md:px-20 pt-[72px] pb-12" style="border-bottom: 1px solid #1e1e1e;">
-
-    <div class="max-w-[680px] mx-auto">
+  <section class="py-12" style="border-bottom: 1px solid #1e1e1e; padding-top: 72px;">
+    <div class="max-w-[720px] mx-auto px-6 md:px-20">
 
       <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-10" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
         Faloe Foundry &nbsp;&middot;&nbsp; Summer 2026
@@ -47,13 +48,11 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
     </div>
-
   </section>
 
   <!-- ─── THE WORK ──────────────────────────────────────── -->
-  <section class="px-6 md:px-20 py-12" style="border-bottom: 1px solid #1e1e1e;">
-
-    <div class="max-w-[680px] mx-auto">
+  <section class="py-12" style="border-bottom: 1px solid #1e1e1e;">
+    <div class="max-w-[720px] mx-auto px-6 md:px-20">
 
       <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-10" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
         The Work
@@ -72,13 +71,11 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
     </div>
-
   </section>
 
   <!-- ─── WHO THIS IS FOR ───────────────────────────────── -->
-  <section class="px-6 md:px-20 py-12" style="border-bottom: 1px solid #1e1e1e;">
-
-    <div class="max-w-[680px] mx-auto">
+  <section class="py-12" style="border-bottom: 1px solid #1e1e1e;">
+    <div class="max-w-[720px] mx-auto px-6 md:px-20">
 
       <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-10" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
         Who This Is For
@@ -94,85 +91,85 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
     </div>
-
   </section>
 
   <!-- ─── THE CURRICULUM ────────────────────────────────── -->
-  <section class="px-6 md:px-20 py-12" style="border-bottom: 1px solid #1e1e1e;">
+  <section class="py-12" style="border-bottom: 1px solid #1e1e1e;">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-20">
 
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 lg:gap-20 xl:gap-32">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 lg:gap-20 xl:gap-32">
 
-      <!-- Left: label + items -->
-      <div>
-
-        <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-16" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
-          The Curriculum
-        </p>
-
+        <!-- Left: label + items -->
         <div>
 
-          <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e;">
-            <p class="text-[12px] uppercase font-light pt-1" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;I&nbsp;]</p>
-            <div>
-              <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">The Director&rsquo;s Toolkit</p>
-              <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">What you are actually doing when you direct a performance. Intention, objective, obstacle. The language that opens an actor up rather than shuts them down.</p>
-            </div>
-          </div>
+          <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-16" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
+            The Curriculum
+          </p>
 
-          <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e;">
-            <p class="text-[12px] uppercase font-light pt-1" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;II&nbsp;]</p>
-            <div>
-              <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Text and Beats</p>
-              <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">Script analysis from the director&rsquo;s chair. What the scene is really about underneath the words. How to find the turn.</p>
-            </div>
-          </div>
+          <div>
 
-          <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e;">
-            <p class="text-[12px] uppercase font-light pt-1" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;III&nbsp;]</p>
-            <div>
-              <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Blocking and Rehearsal</p>
-              <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">How to use space. How to run a productive rehearsal. How to give a note that moves something forward rather than backward.</p>
+            <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e;">
+              <p class="text-[12px] uppercase font-light pt-1" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;I&nbsp;]</p>
+              <div>
+                <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">The Director&rsquo;s Toolkit</p>
+                <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">What you are actually doing when you direct a performance. Intention, objective, obstacle. The language that opens an actor up rather than shuts them down.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e; border-bottom: 1px solid #1e1e1e;">
-            <p class="text-[12px] uppercase font-light pt-1 leading-snug" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;IV&nbsp;+&nbsp;V&nbsp;]</p>
-            <div>
-              <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Practicum</p>
-              <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">Each participant directs two others in a prepared scene. The group watches. We work through it together. This is where it lands.</p>
+            <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e;">
+              <p class="text-[12px] uppercase font-light pt-1" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;II&nbsp;]</p>
+              <div>
+                <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Text and Beats</p>
+                <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">Script analysis from the director&rsquo;s chair. What the scene is really about underneath the words. How to find the turn.</p>
+              </div>
             </div>
+
+            <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e;">
+              <p class="text-[12px] uppercase font-light pt-1" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;III&nbsp;]</p>
+              <div>
+                <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Blocking and Rehearsal</p>
+                <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">How to use space. How to run a productive rehearsal. How to give a note that moves something forward rather than backward.</p>
+              </div>
+            </div>
+
+            <div class="py-8 grid grid-cols-[3.5rem_1fr] gap-6 items-start" style="border-top: 1px solid #1e1e1e; border-bottom: 1px solid #1e1e1e;">
+              <p class="text-[12px] uppercase font-light pt-1 leading-snug" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E; letter-spacing: 0.1em;">[&nbsp;IV&nbsp;+&nbsp;V&nbsp;]</p>
+              <div>
+                <p class="font-light text-[#fdfcf8] mb-3 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Practicum</p>
+                <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">Each participant directs two others in a prepared scene. The group watches. We work through it together. This is where it lands.</p>
+              </div>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
-
-      <!-- Right: supporting detail -->
-      <div class="hidden lg:flex flex-col justify-end pb-8">
-        <div class="space-y-8" style="border-left: 1px solid #1e1e1e; padding-left: 2rem;">
-          <div>
-            <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-2" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">Sessions</p>
-            <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 3vw, 2.75rem); letter-spacing: -0.02em; line-height: 1;">Five</p>
-          </div>
-          <div>
-            <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-2" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">Total Hours</p>
-            <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 3vw, 2.75rem); letter-spacing: -0.02em; line-height: 1;">Ten</p>
-          </div>
-          <div>
-            <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-2" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">Cohort Size</p>
-            <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 3vw, 2.75rem); letter-spacing: -0.02em; line-height: 1;">Twelve</p>
+        <!-- Right: supporting detail -->
+        <div class="hidden lg:flex flex-col justify-end pb-8">
+          <div class="space-y-8" style="border-left: 1px solid #1e1e1e; padding-left: 2rem;">
+            <div>
+              <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-2" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">Sessions</p>
+              <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 3vw, 2.75rem); letter-spacing: -0.02em; line-height: 1;">Five</p>
+            </div>
+            <div>
+              <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-2" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">Total Hours</p>
+              <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 3vw, 2.75rem); letter-spacing: -0.02em; line-height: 1;">Ten</p>
+            </div>
+            <div>
+              <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-2" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">Cohort Size</p>
+              <p class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 3vw, 2.75rem); letter-spacing: -0.02em; line-height: 1;">Twelve</p>
+            </div>
           </div>
         </div>
+
       </div>
 
     </div>
-
   </section>
 
   <!-- ─── WHAT YOU LEAVE WITH ───────────────────────────── -->
-  <section class="px-6 md:px-20 py-12" style="border-bottom: 1px solid #1e1e1e;">
-
-    <div class="max-w-[680px] mx-auto">
+  <section class="py-12" style="border-bottom: 1px solid #1e1e1e;">
+    <div class="max-w-[720px] mx-auto px-6 md:px-20">
 
       <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-10" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
         What You Leave With
@@ -183,81 +180,81 @@ import Layout from '../../layouts/Layout.astro';
       </p>
 
     </div>
-
   </section>
 
   <!-- ─── THE DETAILS ────────────────────────────────────── -->
-  <section class="px-6 md:px-20 py-12" style="border-bottom: 1px solid #1e1e1e;">
+  <section class="py-12" style="border-bottom: 1px solid #1e1e1e;">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-20">
 
-    <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-16" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
-      The Details
-    </p>
+      <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-16" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
+        The Details
+      </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-14 md:gap-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-14 md:gap-16">
 
-      <!-- Schedule -->
-      <div>
-        <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
-          Schedule
-        </p>
-        <div class="space-y-2">
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">June 15 &nbsp;&middot;&nbsp; Session I</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">June 22 &nbsp;&middot;&nbsp; Session II</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">June 29 &nbsp;&middot;&nbsp; Session III</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">July 7 &nbsp;&middot;&nbsp; Session IV</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">July 8 &nbsp;&middot;&nbsp; Session V</p>
-        </div>
-      </div>
-
-      <!-- Time -->
-      <div>
-        <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
-          Time
-        </p>
-        <div class="space-y-2">
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Noon to 2pm ET</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">9am Los Angeles</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">5pm London</p>
-        </div>
-      </div>
-
-      <!-- Format -->
-      <div>
-        <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
-          Format
-        </p>
-        <div class="space-y-2">
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Virtual</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Twelve participants maximum</p>
-          <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Two hours per session</p>
-        </div>
-      </div>
-
-      <!-- Investment -->
-      <div>
-        <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
-          Investment
-        </p>
-        <div class="space-y-4">
-          <div class="flex items-baseline gap-4">
-            <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1;">$450</span>
-            <span class="font-light text-[#c8c5bc]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 13px;">First six spots</span>
-          </div>
-          <div class="flex items-baseline gap-4">
-            <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1;">$575</span>
-            <span class="font-light text-[#c8c5bc]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 13px;">Remaining spots</span>
+        <!-- Schedule -->
+        <div>
+          <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
+            Schedule
+          </p>
+          <div class="space-y-2">
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">June 15 &nbsp;&middot;&nbsp; Session I</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">June 22 &nbsp;&middot;&nbsp; Session II</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">June 29 &nbsp;&middot;&nbsp; Session III</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">July 7 &nbsp;&middot;&nbsp; Session IV</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">July 8 &nbsp;&middot;&nbsp; Session V</p>
           </div>
         </div>
+
+        <!-- Time -->
+        <div>
+          <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
+            Time
+          </p>
+          <div class="space-y-2">
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Noon to 2pm ET</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">9am Los Angeles</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">5pm London</p>
+          </div>
+        </div>
+
+        <!-- Format -->
+        <div>
+          <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
+            Format
+          </p>
+          <div class="space-y-2">
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Virtual</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Twelve participants maximum</p>
+            <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px;">Two hours per session</p>
+          </div>
+        </div>
+
+        <!-- Investment -->
+        <div>
+          <p class="text-[11px] tracking-[0.25em] uppercase font-light mb-6" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
+            Investment
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-baseline gap-4">
+              <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1;">$450</span>
+              <span class="font-light text-[#c8c5bc]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 13px;">First six spots</span>
+            </div>
+            <div class="flex items-baseline gap-4">
+              <span class="font-light text-[#fdfcf8]" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1;">$575</span>
+              <span class="font-light text-[#c8c5bc]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 13px;">Remaining spots</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
-
   </section>
 
   <!-- ─── THE TEACHER ────────────────────────────────────── -->
-  <section class="px-6 md:px-20 py-12" style="border-bottom: 1px solid #1e1e1e;">
-
-    <div class="max-w-[680px] mx-auto">
+  <section class="py-12" style="border-bottom: 1px solid #1e1e1e;">
+    <div class="max-w-[720px] mx-auto px-6 md:px-20">
 
       <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-12" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">
         The Teacher
@@ -274,13 +271,11 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
     </div>
-
   </section>
 
   <!-- ─── CTA ────────────────────────────────────────────── -->
-  <section class="px-6 md:px-20 py-12">
-
-    <div class="max-w-[680px] mx-auto">
+  <section class="py-12">
+    <div class="max-w-[720px] mx-auto px-6 md:px-20">
 
       <p class="font-light text-[#c8c5bc] mb-8 italic" style="font-family: 'Inter', system-ui, sans-serif; font-size: 14px; letter-spacing: 0.02em;">
         Cohort size is twelve. When it&rsquo;s full, it&rsquo;s full.
@@ -295,33 +290,34 @@ import Layout from '../../layouts/Layout.astro';
       </a>
 
     </div>
-
   </section>
 
   <!-- ─── FOOTER ─────────────────────────────────────────── -->
-  <footer class="px-6 md:px-20 py-12 border-t border-[#fdfcf8] border-opacity-10">
+  <footer class="py-12 border-t border-[#fdfcf8] border-opacity-10">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-20">
 
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-      <span class="text-[#fdfcf8] opacity-60" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; letter-spacing: 0.2em;">
-        Faloe
-      </span>
-      <div class="flex gap-8 text-[13px] uppercase font-light text-[#c8c5bc] opacity-60" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.2em;">
-        <span>New York</span>
-        <span>&copy; 2026</span>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+        <span class="text-[#fdfcf8] opacity-60" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; letter-spacing: 0.2em;">
+          Faloe
+        </span>
+        <div class="flex gap-8 text-[13px] uppercase font-light text-[#c8c5bc] opacity-60" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.2em;">
+          <span>New York</span>
+          <span>&copy; 2026</span>
+        </div>
       </div>
-    </div>
 
-    <div class="border-t border-[#fdfcf8] border-opacity-5 pt-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
-      <p class="text-[13px] font-light text-[#c8c5bc] opacity-60 leading-[1.8] max-w-lg" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.02em;">
-        <span class="uppercase" style="letter-spacing: 0.15em;">In Network</span>
-        &nbsp;&mdash;&nbsp;
-        Strategic partnerships with industry-leading post-production houses and virtual stages are currently under finalization.
-      </p>
-      <p class="flex-shrink-0 opacity-70" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-style: italic; color: #B8963E; letter-spacing: 0.01em;">
-        A Film. Not Content.
-      </p>
-    </div>
+      <div class="border-t border-[#fdfcf8] border-opacity-5 pt-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
+        <p class="text-[13px] font-light text-[#c8c5bc] opacity-60 leading-[1.8] max-w-lg" style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.02em;">
+          <span class="uppercase" style="letter-spacing: 0.15em;">In Network</span>
+          &nbsp;&mdash;&nbsp;
+          Strategic partnerships with industry-leading post-production houses and virtual stages are currently under finalization.
+        </p>
+        <p class="flex-shrink-0 opacity-70" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-style: italic; color: #B8963E; letter-spacing: 0.01em;">
+          A Film. Not Content.
+        </p>
+      </div>
 
+    </div>
   </footer>
 
 </Layout>
