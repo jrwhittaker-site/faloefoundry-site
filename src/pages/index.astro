@@ -225,8 +225,8 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-[11px] tracking-[0.3em] uppercase font-light mb-3" style="font-family: 'Inter', system-ui, sans-serif; color: #B8963E;">Beyond Do It Again</p>
         <a
           href="/workshops/beyond-do-it-again"
-          class="inline-block text-[#fdfcf8] text-[12px] font-light hover:opacity-60 transition-opacity duration-300"
-          style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.12em; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;"
+          class="cta-primary inline-block text-[13px] font-light uppercase"
+          style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.12em; padding: 16px 40px; background: #B8963E; color: #0a0a08; text-decoration: none;"
         >
           [&nbsp;Now Enrolling&nbsp;]
         </a>
@@ -645,6 +645,20 @@ import Layout from '../layouts/Layout.astro';
   [data-fade].is-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Primary CTA — solid gold, inverts on hover */
+  .cta-primary {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #B8963E;
+  }
+  .cta-primary:hover {
+    background: #0a0a08;
+    color: #B8963E;
+    border-color: #B8963E;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cta-primary { transition: none; }
   }
 
   /* Keyboard focus styles — visible ring for tab navigation */
