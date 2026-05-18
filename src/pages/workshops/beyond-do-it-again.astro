@@ -260,14 +260,22 @@ import Layout from '../../layouts/Layout.astro';
         The Teacher
       </p>
 
-      <p class="font-light text-[#fdfcf8] leading-[1.35] mb-12" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.35rem, 2.5vw, 1.85rem); letter-spacing: -0.02em;">
-        Jonathan Whittaker has taught directing actors across workshop and production contexts for years and used the same toolkit on set. This course is not a theory of directing performance. It is a practice, built from what actually happens in a rehearsal room, in the moment when an actor looks at you and waits.
-      </p>
-
-      <div style="border: 1px solid #1e1e1e; padding: 1.5rem 2rem;">
-        <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 15px; letter-spacing: 0.01em;">
-          All five sessions are recorded. Participants receive access to the full archive, including their own practicum footage.
+      <div class="space-y-5 mb-10">
+        <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
+          Jonathan Whittaker has spent over two decades teaching directors how to work with actors. As Chair of Film Arts at the New York Film Academy, he built and taught the Director&rsquo;s Craft curriculum to filmmakers from more than twenty countries.
         </p>
+        <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
+          He has directed performance on set as well as in the classroom, from broadcast work with actors including Chrissy Teigen and Clint Dempsey to narrative films including <em>The Silence Between</em> and <em>Emilia</em>, which played the Big Apple Film Festival at Film Forum. He produced <em>Train Baby</em>, with Keith Powell and Judy Reyes, now on Amazon Prime.
+        </p>
+        <p class="font-light text-[#c8c5bc] leading-[1.85]" style="font-family: 'Inter', system-ui, sans-serif; font-size: 18px; letter-spacing: -0.01em;">
+          This is not a theory of directing performance. It is the toolkit he has used in the room, taught by the person who uses it.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-6">
+        <a href="https://www.imdb.com/name/nm4200264/" target="_blank" rel="noopener noreferrer" class="teacher-link">IMDb</a>
+        <a href="https://jrwhittaker.co" target="_blank" rel="noopener noreferrer" class="teacher-link">jrwhittaker.co</a>
+        <a href="https://vimeo.com/jonathanrwhittaker" target="_blank" rel="noopener noreferrer" class="teacher-link">Vimeo</a>
       </div>
 
     </div>
@@ -332,6 +340,23 @@ import Layout from '../../layouts/Layout.astro';
   .cta-outline:hover {
     background-color: #B8963E;
     color: #0c0a07;
+  }
+
+  /* Teacher bio links */
+  .teacher-link {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #B8963E;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
+    transition: opacity 0.3s ease;
+  }
+  .teacher-link:hover {
+    opacity: 0.6;
   }
 
   /* Keyboard focus styles */
