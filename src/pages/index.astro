@@ -280,6 +280,17 @@ import Layout from '../layouts/Layout.astro';
         Expedition 001:<br /><span style="font-style: italic;">The Interior</span>
       </h2>
 
+      <!-- Image — full-bleed, full color -->
+      <div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-16 overflow-hidden" style="aspect-ratio: 16/9;">
+        <img
+          src="/images/expedition/peru/peru-golden-hour-road.jpeg"
+          alt="Golden hour on a road through the expedition landscape, Peru"
+          class="w-full h-full object-cover"
+          style="object-position: center center;"
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 50%, #000000 100%);"></div>
+      </div>
+
       <!-- Three-pronged value -->
       <div class="grid grid-cols-3 gap-6 mb-16 border-t border-[#fdfcf8] border-opacity-10 pt-10">
         <div>
@@ -361,22 +372,25 @@ import Layout from '../layouts/Layout.astro';
         Location and dates are currently in formation. This expedition is limited to twelve participants.
       </p>
 
-      <!-- CTA after Expedition -->
-      <a
-        href="/book"
-        class="inline-block text-[#fdfcf8] text-[10px] font-light hover:opacity-60 transition-opacity duration-300"
-        style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.12em; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;"
-      >
-        SCHEDULE A CONSULTATION
-      </a>
-
+      <!-- Expedition 001 CTA -->
       <a
         href="/field/expedition-001"
-        class="block mt-6 text-[#B8963E] text-[10px] tracking-[0.3em] uppercase font-light hover:opacity-60 transition-opacity duration-300"
-        style="font-family: 'Inter', system-ui, sans-serif;"
+        class="cta-primary inline-block text-[13px] font-light uppercase mb-8"
+        style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.12em; padding: 18px 48px; background: transparent; color: #B8963E; text-decoration: none;"
       >
-        Expedition 001 &middot; Now Enrolling
+        [&nbsp;Expedition 001 &middot; Now Enrolling&nbsp;]
       </a>
+
+      <!-- CTA after Expedition -->
+      <div>
+        <a
+          href="/book"
+          class="inline-block text-[#fdfcf8] text-[10px] font-light hover:opacity-60 transition-opacity duration-300"
+          style="font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.12em; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;"
+        >
+          SCHEDULE A CONSULTATION
+        </a>
+      </div>
 
     </div>
 
