@@ -280,16 +280,20 @@ import Layout from '../layouts/Layout.astro';
         Expedition 001:<br /><span style="font-style: italic;">The Interior</span>
       </h2>
 
-      <!-- Image — full-bleed, full color -->
-      <div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-16 overflow-hidden" style="aspect-ratio: 16/9;">
-        <img
-          src="/images/expedition/peru/peru-golden-hour-road.jpeg"
-          alt="Golden hour on a road through the expedition landscape, Peru"
-          class="w-full h-full object-cover"
-          style="object-position: center center;"
-        />
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 50%, #000000 100%);"></div>
-      </div>
+    </div>
+
+    <!-- Image — full-bleed, full color -->
+    <div class="relative -mx-8 md:-mx-16 lg:-mx-24 xl:-mx-32 mb-16 overflow-hidden h-[360px] md:h-[480px] lg:h-[560px]">
+      <img
+        src="/images/expedition/peru/peru-golden-hour-road.jpeg"
+        alt="Golden hour on a road through the expedition landscape, Peru"
+        class="w-full h-full object-cover"
+        style="object-position: center 70%;"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 50%, #000000 100%);"></div>
+    </div>
+
+    <div class="relative max-w-2xl">
 
       <!-- Three-pronged value -->
       <div class="grid grid-cols-3 gap-6 mb-16 border-t border-[#fdfcf8] border-opacity-10 pt-10">
