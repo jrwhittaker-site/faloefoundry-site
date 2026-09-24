@@ -3,29 +3,62 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  calendly?: boolean;
 }
 const {
   title = 'Faloe — Cinema is passed down by hand.',
   description = 'Faloe is a workshop, an expedition, and a production studio for working storytellers. Built on craft. New York.',
+  calendly = false,
 } = Astro.props;
 
 // Canonical: always non-www HTTPS, using the site root defined in astro.config.mjs
 const canonicalURL = new URL(Astro.url.pathname, 'https://faloefoundry.com');
+
+// Content Security Policy. GitHub Pages cannot send response headers, so the
+// policy ships as a meta tag. Two things cannot be set this way and would need
+// real headers: frame-ancestors (clickjacking) and HSTS.
+//
+// The build emits every script and stylesheet as a file, so no inline <script>
+// or <style> elements exist and script-src can stay at a plain 'self'.
+// style-src needs 'unsafe-inline' for the inline style attributes used
+// throughout the pages; it works only because no hashes appear in the
+// directive, since a hash would make browsers ignore 'unsafe-inline'.
+//
+// Calendly is the only third-party code on the site. It loads on the one page
+// that embeds it, and only that page widens its own policy to allow it.
+const calendlySource = calendly ? ' https://assets.calendly.com' : '';
+const csp = [
+  "default-src 'self'",
+  `script-src 'self'${calendlySource}`,
+  `style-src 'self' 'unsafe-inline'${calendlySource}`,
+  // data: covers the grain texture SVG in global.css
+  "img-src 'self' data:",
+  "font-src 'self'",
+  "connect-src 'self'",
+  "base-uri 'self'",
+  // Nothing on the site posts a form. The roadmap field is handled in JS.
+  "form-action 'none'",
+  "object-src 'none'",
+  calendly ? 'frame-src https://calendly.com' : "frame-src 'none'",
+].join('; ');
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="content-security-policy" content={csp} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Calendly popup widget -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    {calendly && (
+      <>
+        <!-- Calendly scheduling widget, loaded only on the page that embeds it -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async is:inline></script>
+      </>
+    )}
   </head>
   <body class="bg-black min-h-screen">
     <slot />

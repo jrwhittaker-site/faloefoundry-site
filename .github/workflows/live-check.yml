@@ -1,0 +1,84 @@
+name: Live site check
+
+# Rebuilds the commit that last deployed and compares the result against what
+# faloefoundry.com actually serves. A failure means the live site no longer
+# matches this repository, which is what defacement, a hijacked DNS record, or a
+# deploy from outside this repo would look like. GitHub emails the repository
+# owner whenever a scheduled run fails, so a failure is the alert.
+#
+# Note: GitHub disables scheduled workflows on public repositories after 60 days
+# with no repository activity. Re-enable it from the Actions tab if that happens.
+
+on:
+  schedule:
+    - cron: '17 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+# Actions are pinned to commit SHAs rather than tags.
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find the commit that last deployed
+        id: deployed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sha="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy.yml \
+                  --status success --limit 1 --json headSha --jq '.[0].headSha')"
+          if [ -z "$sha" ]; then
+            echo "::error::Could not find a successful deploy run to compare against"
+            exit 1
+          fi
+          echo "Last deployed commit: $sha"
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          ref: ${{ steps.deployed.outputs.sha }}
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Compare each page against the live site
+        run: |
+          fail=0
+          for path in "" "book/" "field/expedition-001/" "workshops/beyond-do-it-again/"; do
+            url="https://faloefoundry.com/${path}"
+            built="dist/${path}index.html"
+            for attempt in 1 2; do
+              live="$(mktemp)"
+              # The query string defeats the CDN cache without changing the file served
+              code="$(curl -sS -L --max-time 30 -o "$live" \
+                        -w '%{http_code}' "${url}?live-check=$(date +%s)")" || code="000"
+              if [ "$code" != "200" ]; then
+                echo "::error::${url} returned HTTP ${code}"
+                fail=1
+                break
+              fi
+              if cmp -s "$live" "$built"; then
+                echo "ok: ${url} matches ${built}"
+                break
+              fi
+              if [ "$attempt" = "1" ]; then
+                echo "${url} differs; retrying in 30s in case a deploy is still propagating"
+                sleep 30
+                continue
+              fi
+              echo "::error::${url} does not match the deployed source (${built})"
+              echo "live: $(wc -c < "$live") bytes, built: $(wc -c < "$built") bytes"
+              diff <(tr '>' '>\n' < "$built") <(tr '>' '>\n' < "$live") | head -20 || true
+              fail=1
+            done
+          done
+          exit $fail
