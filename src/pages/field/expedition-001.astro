@@ -5,6 +5,8 @@ import Layout from '../../layouts/Layout.astro';
 <Layout
   title="Expedition 001 — Faloe Field · Western Ghats 2027"
   description="A ten-day wildlife film expedition in the coffee estates of Chikmagalur, Karnataka. Led by Amoghavarsha JS and Jonathan Whittaker. Twelve participants. October 2027."
+  image="/og/expedition-001.jpg"
+  imageAlt="A forest ridge under monsoon clouds in the Western Ghats, Karnataka."
 >
 
   <!-- ─── NAV ─────────────────────────────────────────── -->
@@ -28,6 +30,7 @@ import Layout from '../../layouts/Layout.astro';
       src="/images/expedition/karnataka/karnataka-landscape-monsoon.jpg"
       alt="Forest ridge under monsoon clouds, Western Ghats, Karnataka"
       class="absolute inset-0 w-full h-full object-cover object-center"
+      width="1920" height="1150" fetchpriority="high" decoding="async"
     />
 
     <div class="absolute inset-0" style="background: rgba(0,0,0,0.45);"></div>
@@ -91,7 +94,7 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- Right: image -->
       <div>
-        <img src="/images/expedition/karnataka/karnataka-minivet-coffee.jpg" alt="Orange Minivet on coffee plant, Western Ghats" class="w-full rounded-[4px] object-cover">
+        <img src="/images/expedition/karnataka/karnataka-minivet-coffee.jpg" alt="Orange Minivet on coffee plant, Western Ghats" class="w-full rounded-[4px] object-cover" width="1400" height="843" loading="lazy" decoding="async">
         <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 10px; letter-spacing: 0.2em;" class="text-[#c8c5bc] opacity-50 uppercase mt-3">© Amoghavarsha</p>
       </div>
 
@@ -112,7 +115,7 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- Amoghavarsha -->
       <div>
-        <img src="/images/expedition/headshots/amoghavarsha.jpeg" alt="Amoghavarsha JS" class="w-full max-w-[280px] aspect-[4/5] object-cover object-top rounded-[4px] mb-8">
+        <img src="/images/expedition/headshots/amoghavarsha.jpeg" alt="Amoghavarsha JS" class="w-full max-w-[280px] aspect-[4/5] object-cover object-top rounded-[4px] mb-8" width="569" height="934" loading="lazy" decoding="async">
 
         <h3 class="font-light text-[#fdfcf8] leading-[0.95] mb-6" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -0.03em;">
           Amoghavarsha JS
@@ -136,7 +139,7 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- Jonathan Whittaker -->
       <div>
-        <img src="/images/expedition/headshots/jonathan-whittaker.jpeg" alt="Jonathan Whittaker" class="w-full max-w-[280px] aspect-[4/5] object-cover object-top rounded-[4px] mb-8">
+        <img src="/images/expedition/headshots/jonathan-whittaker.jpeg" alt="Jonathan Whittaker" class="w-full max-w-[280px] aspect-[4/5] object-cover object-top rounded-[4px] mb-8" width="800" height="800" loading="lazy" decoding="async">
 
         <h3 class="font-light text-[#fdfcf8] leading-[0.95] mb-6" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -0.03em;">
           Jonathan Whittaker
@@ -165,7 +168,7 @@ import Layout from '../../layouts/Layout.astro';
     </p>
 
     <div class="max-w-[800px] mx-auto">
-      <img src="/images/expedition/peru/peru-jonathan-teaching.jpeg" alt="Jonathan Whittaker teaching in the field" class="w-full rounded-[4px] object-cover">
+      <img src="/images/expedition/peru/peru-jonathan-teaching.jpeg" alt="Jonathan Whittaker teaching in the field" class="w-full rounded-[4px] object-cover" width="1600" height="1200" loading="lazy" decoding="async">
     </div>
 
   </section>
@@ -219,8 +222,8 @@ import Layout from '../../layouts/Layout.astro';
     </div>
 
     <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[900px] mx-auto justify-center">
-      <img src="/images/expedition/peru/peru-jonathan-filming.jpeg" alt="Jonathan Whittaker filming on location, Peru" class="rounded-[4px] object-cover w-full aspect-[4/3]">
-      <img src="/images/expedition/peru/peru-cohort-forest.jpeg" alt="Cohort in the forest, Peru" class="rounded-[4px] object-cover w-full aspect-[4/3]">
+      <img src="/images/expedition/peru/peru-jonathan-filming.jpeg" alt="Jonathan Whittaker filming on location, Peru" class="rounded-[4px] object-cover w-full aspect-[4/3]" width="1200" height="1600" loading="lazy" decoding="async">
+      <img src="/images/expedition/peru/peru-cohort-forest.jpeg" alt="Cohort in the forest, Peru" class="rounded-[4px] object-cover w-full aspect-[4/3]" width="1200" height="900" loading="lazy" decoding="async">
     </div>
 
   </section>
@@ -252,7 +255,7 @@ import Layout from '../../layouts/Layout.astro';
     </p>
 
     <div class="mt-12 max-w-[700px]">
-      <img src="/images/expedition/peru/peru-student-rocky-terrain.jpeg" alt="Student filming on rocky terrain, Peru" class="w-full rounded-[4px] object-cover aspect-[16/10]">
+      <img src="/images/expedition/peru/peru-student-rocky-terrain.jpeg" alt="Student filming on rocky terrain, Peru" class="w-full rounded-[4px] object-cover aspect-[16/10]" width="1400" height="1867" loading="lazy" decoding="async">
     </div>
 
     <div class="w-full h-px bg-[#fdfcf8] opacity-10 my-20"></div>
