@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+// The roadmap sign-up is hidden for now. The field has nowhere to send an
+// address yet, so asking for one would promise something we cannot keep.
+// Set this to true once the Tally form is wired up and the block comes back.
+const showRoadmapSignup = false;
+
 // Structured data: tells search engines who runs this site and where it is.
 // Course and Event markup are left out on purpose until the workshop and the
 // expedition have confirmed dates to put in them.
@@ -597,7 +602,8 @@ const organization = {
 
     <div class="grid md:grid-cols-2 gap-16 md:gap-24 max-w-5xl">
 
-      <!-- Primary CTA: Roadmap -->
+      <!-- Primary CTA: Roadmap. Hidden behind showRoadmapSignup until Tally is wired up -->
+      {showRoadmapSignup && (
       <div>
         <p class="text-[12px] tracking-[0.3em] uppercase text-[#B8963E] mb-12 font-light" style="font-family: 'Inter', system-ui, sans-serif;">
           Start here
@@ -634,6 +640,7 @@ const organization = {
           </p>
         </form>
       </div>
+      )}
 
       <!-- Secondary CTA: Consultation -->
       <div>
